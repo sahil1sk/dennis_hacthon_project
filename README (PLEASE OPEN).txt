@@ -2,7 +2,7 @@
 
 Important Note:
 As Backend In Heroku if there is no interaction with Backend then it will go in Idle State, So for first user meeting joining and creation
-it will be slow because services starting in backend but then it will work Smoothly. 25 Seconds Delay in Token generator and api Call first one.
+it will be slow because services starting in backend but then it will work Smoothly. 35 Seconds Delay in Token generator and api Call first one.
 
 
 // ======= LIVE URL'S =============
