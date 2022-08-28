@@ -1,0 +1,38 @@
+<nav *ngIf="user" class="navbar bg-dark text-white shadow" id="navbarId">
+  <div class="container-fluid align-items-center">
+    <span class="h5 pointer p-1">
+      <a [routerLink]="['/']">
+        <img src="/assets/logo.png" class="logo" alt="logo">
+      </a>
+    </span>
+    <div ngbDropdown class="d-inline-block">
+      <!-- <img src="{{user?.profilePictureUrl}}" alt="{{user?.name}}" id="dropdownBasic1" ngbDropdownToggle class="pointer imgs"> -->
+      <span id="dropdownBasic1" ngbDropdownToggle class="pointer">{{user?.name | slice : 0 : 15}} </span>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="{{user.name.length < 7 ? 'mw': 'mn'}}">
+        <button ngbDropdownItem (click)="showApp()">Profile</button>
+        <button ngbDropdownItem (click)="logout()"> Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div *ngIf="!isLoading">
+  <div *ngIf="user">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- <div  class="d-flex align-items-center justify-content-center hv" *ngIf="!user">
+    <img class="pointer effect" src="/assets/auth.png" (click)="login()" alt="auth">
+  </div> -->
+  <div *ngIf="!user">
+    <app-preview></app-preview>
+  </div>
+</div>
+
+
+<div *ngIf="isLoading" class="d-flex align-items-center justify-content-center hv">
+  <div class="align-tems-center">
+    <strong>Loading...</strong>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  </div>
+</div>

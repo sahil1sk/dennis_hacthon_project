@@ -1,0 +1,280 @@
+.logo {
+    height: 25px;
+}
+
+#navbarId, .container-fluid {
+    height: 65px;
+    position: fixed;
+    background: #232736;
+    z-index: 5;
+}
+
+
+.pointer {
+    cursor: pointer;
+}
+
+.mw, .mn {
+    left: -25px;
+    min-width: 60px;
+    right: 0px;
+    max-width: 80px;
+}
+
+.mn {
+    left: 0px;
+}
+
+/* =============================== Design of meeting now ===================== */
+
+.row {
+    padding: 50px;
+}
+
+#background {
+    background: #272631;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 30px;
+    min-height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#background::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 5px;
+    background-color: #201F27; 
+}
+  
+  /* Add a thumb */
+#background::-webkit-scrollbar-thumb {
+    background: #1a191f;
+    border-radius: 5px;
+}
+
+.flexing-1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-s {
+    position: relative;
+    height: 150px;
+    border-radius: 10px;
+    background: #0E79F9;
+    margin: 10px;
+    
+    box-shadow: 0px 0px 4px 0px rgba(242, 241, 241, 0.152);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(242, 241, 241, 0.152);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(242, 241, 241, 0.152);       
+}
+
+.sl-box {
+    background: #272631;
+    transition: all 0.5 ease;
+}
+
+/* =============== DESIGN FOR MEETING LIST START ========= */
+.hov {
+    padding: 10px;
+    height: 130px;
+}
+
+.hov:hover {
+    background: #0E79F9;
+    transition: all 0.5 ease;
+}
+
+.hov div p, .hov p {
+    margin: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.825);
+}
+
+.hov p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.689);
+}
+
+.meetLink {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 10px;
+    width: 250px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 4px 0px rgba(242, 241, 241, 0.152);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(242, 241, 241, 0.152);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(242, 241, 241, 0.152);      
+}
+
+.linkp {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.805);
+    
+}
+
+
+
+/* .meetLink::after {
+    content: "🄯";
+    position: absolute;
+    right: 10px;
+} */
+
+.clockIcon, .copyIcon {
+    width: 15px;
+    height: 15px;
+}
+
+/* =============== DESIGN FOR MEETING LIST END =========== */
+
+.ex-h {
+    height: 200px;
+    cursor: pointer;
+    transition: 0.5 ease;
+}
+
+.nm {
+    background: #FF742E;
+}
+
+#bg-timer {
+    background-image: url('/assets/bg-timer.png');
+    height: 250px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.d-boxing {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+}
+
+.d-h, .d-sh {
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    /* line-height: 5px; */
+}
+
+.d-sh {
+    color: rgb(210, 221, 230);
+}
+
+.d-h {
+    font-size: 35px;
+}
+
+.glassmorphism {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 10px;
+    left: 10px;
+    border-radius: 7px;
+    background: rgb(255 253 253 / 14%);
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 0px rgba(242, 241, 241, 0.355);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(242, 241, 241, 0.355);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(242, 241, 241, 0.355);
+}
+
+.glassmorphism img {
+    width: 40px;
+    height: 40px;
+}
+
+.bHSH {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 10px 0px 0px 10px;
+}
+
+.bHSH p {
+    margin: 0px;
+}
+
+.bHSH .h, .bHSH .sh {
+    padding: 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+} 
+
+.bHSH .sh {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.689);
+} 
+
+.sbox {
+    padding: 10px;
+    margin: 10px;
+    background: white;
+    border-radius: 10px;
+    width: 90%;
+}
+
+
+.flexing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#emptyS {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#eimg {
+    height: 250px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-device-width: 900px) {
+    .bHSH {
+        left: 10px;
+        margin: 10px 10px 0px 0px;
+    }
+    .hov {
+        height: 150px;
+    }
+}
+
+
+@media only screen and (max-device-width: 650px) {
+        
+    .row {
+        margin-top: 40px;
+        padding: 2px;
+    }
+
+    .box-s, .sl-box {
+        width: 95%;
+    }
+    
+    .sbox {
+        width: 95%;
+    }
+}

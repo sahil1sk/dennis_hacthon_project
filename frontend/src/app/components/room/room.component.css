@@ -1,0 +1,15 @@
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.switch{
+    border:none;
+    background-color:  #54575b36;
+    color:#fff;
+    padding:10px 20px;
+    font-size:16px;
+    margin:2px;
+    cursor: pointer;
+    font-size: 18px;
+}

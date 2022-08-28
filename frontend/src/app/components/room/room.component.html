@@ -1,0 +1,80 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Meeting Timer</h4>
+    </div>
+    <div class="modal-body">
+      <div id="timerId"></div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">OK</button>
+    </div>
+</ng-template>
+
+<div id="stream-wrapper" (dblclick)="toggleScreen()">
+  <div class="container">
+
+    <div class="row" id="box">
+      <div id="main-video-box" class="col-12 col-xs-7 col-sm-7 m-2 p-1">
+        <div id="user-box" style="height: 125px; margin-right: 1px; margin-top: 8px;">
+          <div class="video-container" id="user-container-ourself">
+            <div class="video-player" id="user-ourself"></div>
+            <div class="text-white mikeOn" id="mouser-ourself"><i class="fa fa-microphone" aria-hidden="true"></i></div>
+            <div class="text-white mikeOFF" id="moffuser-ourself"><i class="fa fa-microphone-slash" aria-hidden="true"></i></div>
+            <div class="text-white cameraOff"  id="coffuser-ourself"></div>
+            </div>
+        </div>
+
+        <div id="main-video" style="width: 100%; margin-left: 3px;"></div>
+      </div>
+      <div class="col-12 col-xs-4 col-sm-12 col-md-4 m-2 row" id="reverse-chat">
+        <div id="video-streams"  class="p-2" style="width: 100%; margin-left: 3px;" class="row" (click)="inHi(false)"></div>
+        <div id="chat-streams" class="p-2" style="width: 100%;  margin-left: 3px; position: relative;" (click)="inHi(true)" class="row">
+          <div id="chats"></div>
+          <div id="chat-input" class="p-2">
+            <div class="input-group">
+              <select #selectValue class="form-control" name="names-dropdown" id="names-drop" (change)="selectUserToSend($event)">
+                <option value="0">All</option>
+                <option *ngFor="let c of connectedUsers | keyvalue" value="{{c.key}}">{{c.value}}</option>
+              </select>
+              <input  type="text" class="form-control" (keyup.enter)="sendMessage(selectValue)" [(ngModel)]="msg" placeholder="send message..." >
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" (click)="sendMessage(selectValue)" type="button" >Send</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="stream-controls">
+      <div id="stream-flex">
+        <button *ngIf="!mikeOn" id="mic-btn" class="rounded" (click)="toggleMic($event)">
+          <i class="fa fa-microphone-slash" aria-hidden="true"></i>
+        </button>
+
+        <button *ngIf="mikeOn" id="mic-btn" class="rounded" (click)="toggleMic($event)">
+          <i class="fa fa-microphone" aria-hidden="true"></i>
+        </button>
+        
+        <button id="leave-btn" class="rounded" (click)="leaveStream()">
+          <img src="/assets/hangup.png" alt="camoff" class="imgcam">
+        </button>
+
+        <button *ngIf="cameraOn" id="camera-btn" class="rounded" (click)="toggleCamera($event)">
+          <img src="/assets/cam.png" alt="camoff" class="imgcam">
+        </button>
+
+        <button *ngIf="!cameraOn" id="camera-btn" class="rounded" (click)="toggleCamera($event)">
+          <img src="/assets/camoff.png" style="color:red;" alt="camoff" class="imgcam">
+        </button>
+        
+        <button [disabled]="!cameraOn || (cameras <= 1)" class="rounded switch" (click)="switchCamera()">
+          <img src="/assets/cam_rotate.png" alt="switch" class="imgcam">
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</div>

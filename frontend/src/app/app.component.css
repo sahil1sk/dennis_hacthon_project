@@ -1,0 +1,76 @@
+.logo {
+    height: 25px;
+}
+
+#navbarId, .container-fluid {
+    height: 65px;
+    position: fixed;
+    background: #232736;
+    z-index: 5;
+    margin: 0px;
+    top: 0px;
+}
+
+
+/* .btn {
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+    background: #ffc107;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+} */
+
+.pointer {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    transition: all 0.5s ease;
+    color: #e5dcdc;
+}
+
+.hv {
+    height: 80vh;
+}
+
+.shadow {
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.75);
+}
+
+.effect:hover {
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+}
+
+.effect:active {
+    border-radius: 5px;
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+
+.mw, .mn {
+    left: -25px;
+    min-width: 60px;
+    right: 0px;
+    max-width: 80px;
+}
+
+.mn {
+    left: 0px;
+}
+.imgs {
+    width: 35px;
+    height: 35px;
+    border-radius: 999999px;
+}
+
+.flex-comp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

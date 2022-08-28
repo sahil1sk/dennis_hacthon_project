@@ -1,0 +1,114 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Join Meeting</h4>
+    </div>
+    <div class="modal-body">
+      
+      <form class="input-group">
+        <input type="text" class="form-control" id="joinId" required name="joinId"  placeholder="Enter invite link" aria-label="Enter invite link" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Join</button>
+      </form>
+      <div [hidden]="joinId.valid || joinId.pristine" class="alert alert-danger"> Invite link is required </div>
+
+    </div>
+</ng-template>
+
+
+<nav class="navbar bg-dark text-white shadow" id="navbarId">
+  <div class="container-fluid align-items-center">
+    <span class="h5 pointer p-1">
+      <img src="/assets/logo.png" class="logo" alt="logo">
+    </span>
+    <div  ngbDropdown class="d-inline-block">
+      <span id="dropdownBasic1" ngbDropdownToggle class="pointer" ></span>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="mn">
+        <button ngbDropdownItem >Profile</button>
+        <button ngbDropdownItem > Logout</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="background">
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-12">
+      <div class="flexing-1">
+        
+        <div class="box-s ex-h col-xs-5 col-sm-5 col-12 nm">
+          <div class="glassmorphism">
+            <img src="/assets/instant.png" alt="instant">
+          </div>
+
+          <div class="bHSH">
+            <p class="h">Instant Meeting</p>
+            <p class="sh">set up instant meeting</p>
+          </div>
+        </div>
+        
+        <div class="box-s ex-h col-xs-5 col-sm-5 col-12">
+          <div class="glassmorphism">
+            <img src="/assets/join.png" alt="instant">
+          </div>
+
+          <div class="bHSH">
+            <p class="h">Join Meeting</p>
+            <p class="sh">via invitation link</p>
+          </div>
+        </div>
+        
+        <div class="box-s ex-h col-xs-5 col-sm-5 col-12">
+          <div class="glassmorphism">
+            <img src="/assets/schedule.png" alt="instant">
+          </div>
+
+          <div class="bHSH">
+            <p class="h">Schedule</p>
+            <p class="sh">plan your meetings</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="sbox">
+          <div class="d-flex justify-content-center p-2">
+              <button type="button" class="btn btn-success m-2" >Create Schedule Link</button>
+          </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-xs-6 col-sm-6 col-12 ">
+      <div id="bg-timer" class="box-s col-12 d-sm-block d-xs-block d-none">
+        <div class="d-boxing text-white">
+          <p id="time-pa" class="d-h">12:59 PM</p>
+          <p id="date-pa" class="d-sh">Thursday 29 Oct, 2020</p>
+        </div>
+      </div>
+      
+      
+      <div id="emptyS">
+        <img class="d-sm-block d-xs-block d-none" id="eimg" src="/assets/empty.png" alt="empty_schedules" />
+      </div>
+
+      <div>
+        <div *ngFor="let item of meetings" class="box-s col-12 sl-box hov text-white">
+          <div class="d-flex justify-content-between">
+            <p>Wed, 30th August 2022<p>
+            <img class="clockIcon" src="/assets/clock.png" alt="clock">
+          </div>
+          <p>02:00 PM 04:30 PM</p>
+
+          <div class="meetLink">
+            <div class="linkp">https://quickmeet.netlify.app</div>
+            <img class="copyIcon" src="/assets/copy.png" alt="copy" /> 
+          </div>
+        </div>
+
+      </div>
+        
+    </div>
+  </div>
+
+</div>

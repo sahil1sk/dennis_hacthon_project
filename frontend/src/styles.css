@@ -1,0 +1,351 @@
+body {
+    background: #272631;
+    min-height: 100vh;
+}
+
+
+#stream-wrapper {
+    min-height: 100vh;
+    width: 100wh;
+    background: #272631;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#box {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    background: #272631;
+    border-radius: 20px;
+    position: relative;
+}
+
+#user-box {
+    width: 125px;
+    height: 125px;
+    border-radius: 999999px;
+    position: absolute;
+    background: #201F27;
+    z-index: 3000;
+    top: 0px;
+    right: 0px;
+}
+
+#user-ourself {
+    width: 125px;
+    height: 125px;
+    margin: 0px;
+    /* border-radius: 50%; */
+}
+
+#mouser-ourself, #moffuser-ourself {
+    top: 5px;
+    right: 5px;
+}
+
+#coffuser-ourself {
+    right: 0px;
+    position: absolute;
+    width: 126px;
+    height: 100%;
+    background: red;
+    top: 0px;
+    border-radius: 5px;
+    z-index: 500;
+    padding: 70px 0;
+    text-align: center;
+}
+
+#main-video-box, #main-video {
+    height: 80vh;
+    overflow: hidden;
+    background: #201f27;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* Give video-stream scrollbar to grey color  */
+#video-streams::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+    background-color: #201F27;
+}
+  
+  /* Add a thumb */
+#video-streams::-webkit-scrollbar-thumb {
+    background: #201F27;
+    border-radius: 5px;
+}
+
+#video-streams{
+    border-radius: 10px;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #201f27;
+    transition: all 0.3s ease-in-out;
+    height: 65vh;
+}
+
+
+#chat-streams {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #201f27;
+    transition: all 0.3s ease-in-out;
+    height: 13vh;
+    margin-top: 1vh;
+}
+
+
+.video-container {
+    position: relative;
+}
+
+#coffuser-ourself {
+    cursor: auto;
+}
+
+.cameraOff {
+    position: absolute;
+    width: 87%;
+    height: 176px;
+    background: red;
+    top: 4px;
+    right: 17px;
+    border-radius: 5px;
+    z-index: 500;
+    padding: 70px 0;
+    text-align: center;
+    cursor: pointer;
+    
+    display: none;
+}
+    
+
+.mainCameraOff {
+    position: absolute;
+    background: red;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    border-radius: 10px;
+    padding: 40vh 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    display: none;
+}
+
+
+#names-drop {
+    max-width: 80px;
+}
+
+
+/* When we are in small screen then video-streams width is 95% */
+@media screen and (max-width: 767px) {
+    #video-streams, #chat-streams {
+        width: 95%;
+    }
+    #main-video-box, #main-video{
+        width: 95%;
+    }
+    #main-video-box, #main-video {
+        height: 100vh;
+    }
+    .cameraOff {
+        /* width: 85%; */
+        width: 95%;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
+    .cameraOff {
+        width: 94%;
+    }
+    #video-streams, #chat-streams {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-device-width: 300px) and (max-device-width: 481px) { 
+    .cameraOff {
+        width: 91%;
+    }
+
+    #reverse-chat {
+        flex-direction: column-reverse;
+    }
+    #names-drop {
+        max-width: 50px;
+    }
+}
+
+@media only screen and (max-device-width: 300px) {
+    .cameraOff {
+        width: 86%;
+    }
+
+    
+    #names-drop {
+        max-width: 50px;
+    }
+    
+    #reverse-chat {
+        flex-direction: column-reverse;
+    }
+}
+
+
+.mikeOFF {
+    z-index: 1500;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #54575b36;
+    color: white;
+    text-align: center;
+
+    display: none;
+}
+
+
+.mikeOn {
+    z-index: 1000;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #54575b36;
+    color: white;
+    text-align: center;
+
+    
+    display: none;
+}
+
+.video-player {
+    margin: 5px;
+    height: 175px;
+    border-radius: 5px;
+    background-color: #332e66;
+}
+
+.video-player div {
+    height: 175px;
+    border-radius: 5px;
+}
+
+#leave-btn{
+    border:none;
+    background-color: #EE4B2B;
+    color:#fff;
+    padding:10px 20px;
+    font-size:16px;
+    margin:2px;
+    cursor: pointer;
+}
+
+#camera-btn, #mic-btn{
+    border:none;
+    /* background-color: cadetblue; */
+    background-color:  #54575b36;
+    color:#fff;
+    padding:10px 20px;
+    font-size:16px;
+    margin:2px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#stream-controls{
+    /* margin-top:0.5em; */
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 15px;
+    z-index: 2000;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+#stream-flex {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cp {
+    cursor: pointer;
+}
+
+.cp:hover {
+    transition: 0.3s ease;
+    opacity: 0.5;
+}
+
+.imgcam {
+    height: 18px;
+    width: 18px; 
+    color: white;
+}
+
+#chat-input {
+    position: absolute; 
+    bottom: 0px;
+    margin-right: 3px;
+}
+
+#chats {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 60px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/* Give video-stream scrollbar to grey color  */
+#chats::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+    background-color: #201F27; 
+}
+  
+  /* Add a thumb */
+#chats::-webkit-scrollbar-thumb {
+    background: #1a191f;
+    border-radius: 5px;
+}
+
+.sender, .msg-date {
+    color: rgb(240, 235, 235);
+    font-size: 12px;
+}
+
+.sender {
+    padding-right: 4px;
+}
+
+.message-text {
+    color: rgb(240, 235, 235);
+    font-size: 15px;
+}
+
+.fa.fa-microphone-slash {
+    color: red;
+}

@@ -1,0 +1,149 @@
+.logo {
+    height: 25px;
+}
+
+#navId {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    padding: 12px;
+    align-items: center;
+    background: #232736;
+    z-index: 5;
+}
+
+
+#backgroundMain {
+    min-height: 100%;
+    width: 100%;
+    color: white;
+    /* background: red; */
+}
+
+.go-link {
+    color: #5865F2;
+    cursor: pointer;
+}
+
+
+.row {
+    /* margin-top: 15px; */
+    padding: 20px 10px 10px 20px;
+    margin-bottom: 50px;
+}
+
+.row div {
+    margin-top: 15px;
+}
+
+.img-wrapper {
+    padding: 20px;
+    border-radius: 4px;
+    background:#232736;
+    box-shadow: 0px 0px 3px 0px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(255,255,255,0.75);
+
+}
+
+#primg {
+    height: 350px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.heading {
+    font-size: 3.25rem;
+}
+
+.sub-heading {
+    font-size: 18px;
+}
+
+#startbtn, #joinbtn {
+    padding: 7px;
+    border-radius: 3px;
+    color: white;
+    background: #0E79F9;
+    font-weight: bold;
+    margin: 1px;
+    width: 150px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+#joinbtn {
+    background: #FF742E;
+}
+
+
+#startbtn:focus, #joinbtn:focus {
+    outline: none;
+}
+
+#startbtn:active, #joinbtn:active {
+    box-shadow: none;
+    transform: translateY(1px);
+}
+
+#footer {
+    width: 100%;
+    text-align: center;
+    background: #232736;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+@media only screen and (min-device-width: 530px) and  (max-device-width: 1024px) {
+
+    .img-wrapper {
+        padding: 15px;
+        border-radius: 3px;
+    }
+    
+    #primg {
+        height: 250px;
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    
+    .heading {
+        font-size: 2rem;
+    }
+
+    .sub-heading {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-device-width: 530px) {
+ 
+    .img-wrapper {
+        padding: 10px;
+        border-radius: 2px;
+    }
+    
+    #primg {
+        height: 180px;
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    
+    .heading {
+        font-size: 1.75rem;
+    }
+
+    .sub-heading {
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,125 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Join Meeting</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+
+    <form #joinForm="ngForm" class="input-group" (ngSubmit)="joinRoom()">
+      <input type="text" class="form-control" id="joinId" required [(ngModel)]="id" name="joinId" #joinId="ngModel"
+        placeholder="Invite link or code" aria-label="Invite link or code" aria-describedby="button-addon2">
+      <button [disabled]="!joinForm.form.valid" class="btn btn-outline-secondary" type="submit"
+        id="button-addon2">Join</button>
+    </form>
+    <div [hidden]="joinId.valid || joinId.pristine" class="alert alert-danger"> Invite link or code is required </div>
+
+  </div>
+</ng-template>
+
+
+<div id="background">
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-12">
+      <div class="flexing-1">
+
+        <div class="box-s ex-h col-xs-5 col-sm-5 col-12 nm" (click)="createInstantMeeting()">
+          <div class="glassmorphism">
+            <img src="/assets/instant.png" alt="instant">
+          </div>
+
+          <div class="bHSH">
+            <p class="h">Instant Meeting</p>
+            <p class="sh">set up instant meeting</p>
+          </div>
+        </div>
+
+        <div class="box-s ex-h col-xs-5 col-sm-5 col-12" (click)="openSm(content)">
+          <div class="glassmorphism">
+            <img src="/assets/join.png" alt="instant">
+          </div>
+
+          <div class="bHSH">
+            <p class="h">Join Meeting</p>
+            <p class="sh">via invitation link</p>
+          </div>
+        </div>
+
+        <div class="box-s ex-h col-xs-5 col-sm-5 col-12" (click)="showShedule = !showShedule">
+          <div class="glassmorphism">
+            <img src="/assets/schedule.png" alt="instant">
+          </div>
+
+          <div class="bHSH">
+            <p class="h">Schedule</p>
+            <p class="sh">plan your meetings</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div *ngIf="showShedule" class="sbox">
+        <div class="flexing p-2">
+          <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" [minDate]="minDate"></ngb-datepicker>
+
+          <div class="m1">
+            <div class="p-1">
+              <label for="fromTime" class="bold">From Time:</label>
+              <ngb-timepicker id="fromTime" [(ngModel)]="time1" (ngModelChange)="setTime()" [meridian]="meridian1">
+              </ngb-timepicker>
+            </div>
+
+            <div class="p-1">
+              <label for="fromTime" class="bold">To Time:</label>
+              <ngb-timepicker id="fromTime" [(ngModel)]="time2" (ngModelChange)="setTime()" [meridian]="meridian2">
+              </ngb-timepicker>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center p-2">
+          <button type="button" class="btn btn-success m-2" (click)="createScheduledMeeting()">Create Schedule
+            Link</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-xs-6 col-sm-6 col-12">
+      <div id="bg-timer" class="box-s col-12 {{meetings.length ? '' : 'd-sm-block d-xs-block d-none'}}">
+        <div class="d-boxing text-white">
+          <p id="time-pa" class="d-h">12:59 PM</p>
+          <p id="date-pa" class="d-sh">Thursday 29 Oct, 2020</p>
+        </div>
+      </div>
+
+
+
+      <div *ngIf="!meetings.length" id="emptyS">
+        <img class="d-sm-block d-xs-block d-none" id="eimg" src="/assets/empty.png" alt="empty_schedules" (click)="showShedule = !showShedule"/>
+      </div>
+
+      <div *ngIf="meetings.length">
+        <div *ngFor="let item of meetings | scheduleList" class="box-s col-12 sl-box hov text-white" (click)="copyLink(item.id)">
+          <div class="d-flex justify-content-between">
+            <p>{{item.scheduleDate}}
+            <p>
+              <img class="clockIcon" src="/assets/clock.png" alt="clock">
+          </div>
+          <!-- <p>14:00 - 16:30 - Starts in 12 Hours</p> -->
+          <p>{{item.fromTime}} - {{item.toTime}}</p>
+
+          <div class="meetLink">
+            <div class="linkp">https://quickmeet.netlify.app</div>
+            <img class="copyIcon" src="/assets/copy.png" alt="copy" />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+##5 mint Dialog will pop at the end of time then automatically end that meeting time over just 5 mint extended time
+1. Meeting expiring, before start come, at end time 5 mint dialog open.
+2. Password Less Login & SignUp
+3. Full Authenticated & Authorize
+4. Backend with Harper DB
+5. Multple user can join the video meeting and chat with each other, Switch Camera
+6. Deployed on Secure Servers
+7. Double Tap to Full Screen
+8. Smooth & Quick to use interface
+9. Click on any user video it will come on Stage or Big Screen
+10. The Switch Camera will be available if Device has more than one camera and video is turned on by user
+12. Fully Responsive
+13. Token will Renew During Meeting if expiring using token_expiring agora events
+
+
+## Remember to add 
+## First time the website will take time to load like 1 minutes because when no interactions by users as no userbase now it will go in 
+it is in Idle State then the Backend will also go down as we know in Heroku. 
+But after 1 or 2 mint to you on the site then all the things will work smoothly.
+
+
+
+
+
