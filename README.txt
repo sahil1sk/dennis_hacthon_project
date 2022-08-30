@@ -25,7 +25,7 @@ As Backend In Heroku if there is no interaction with Backend then it will go in 
 
 // ======= LIVE URL'S =============
 
-Frontent WEB APP => 'http://quickmeet.netlify.app'
+Frontend WEBSITE LIVE => 'http://quickmeet.netlify.app'
 Backend API'S => 'https://quick-chat-api.herokuapp.com',
 Agora Token Generator => 'https://go-agora-server.herokuapp.com'
 
