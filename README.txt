@@ -4,6 +4,7 @@
 
 
 ## Features:
+(Important Feature 5 mint Dialog will pop at the end of time then automatically end that meeting time over just 5 mint extended time)
 1. Meeting expiring, before start meeting handled, at end time 5 mint dialog open.
 2. Password Less Login & SignUp
 3. Full Authenticated & Authorize
@@ -16,7 +17,6 @@
 10. The Switch Camera will be available if Device has more than one camera and video is turned on by user
 12. Fully Responsive
 13. Token will Renew During Meeting if expiring using token_expiring agora events
-14. 5 mint Dialog will pop at the end of time then automatically end that meeting time over just 5 mint extended time
 
 
 Important Note:
