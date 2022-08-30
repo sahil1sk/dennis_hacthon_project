@@ -4,7 +4,7 @@
 
 
 ## Features:
-1. Meeting expiring, before start come, at end time 5 mint dialog open.
+1. Meeting expiring, before start meeting handled, at end time 5 mint dialog open.
 2. Password Less Login & SignUp
 3. Full Authenticated & Authorize
 4. Backend with Harper DB
