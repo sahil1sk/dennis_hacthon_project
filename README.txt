@@ -1,6 +1,6 @@
 ## This whole Project is for Dennis Hackthon (https://www.youtube.com/watch?v=qU2KfMwOfC4&t)
 
-# Idea is from Meet. When first time I tried to Schedule Meeting in Google Meet it was little Hard for me. So the opportunity here comes for me, Quick Meet is Simple & Fast to use Application. Easy to interact with it as Password Less Login/Sign Up. Schedule meeting just by selecting 3 Options Quick & Easy to user for everyone.
+# Idea is from Meet. When first time I tried to Schedule Meeting in Google Meet it was little Hard for me. So the opportunity here comes for me, Quick Meet is Simple & Fast to use Application. Easy to interact with it as Password Less Login/Sign Up. Schedule meeting just by selecting 3 Options Quick & Easy to use for everyone.
 
 
 ## Features:
@@ -30,6 +30,7 @@ Frontent WEB APP => 'http://quickmeet.netlify.app'
 Backend API'S => 'https://quick-chat-api.herokuapp.com',
 Agora Token Generator => 'https://go-agora-server.herokuapp.com'
 
+## Pitcures are also available inside "Working Project Images" Folder
 
 ## Frontend using Angular and Backend Using Spring Boot
 ## For Security & Password Less Authentication & Authoriztation using Frontegg
