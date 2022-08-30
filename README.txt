@@ -30,7 +30,7 @@ Frontent WEB APP => 'http://quickmeet.netlify.app'
 Backend API'S => 'https://quick-chat-api.herokuapp.com',
 Agora Token Generator => 'https://go-agora-server.herokuapp.com'
 
-## Pitcures are also available inside "Working Project Images" Folder
+## Pictures are also available inside "Working Project Images" Folder
 
 ## Frontend using Angular and Backend Using Spring Boot
 ## For Security & Password Less Authentication & Authoriztation using Frontegg
