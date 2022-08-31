@@ -19,7 +19,7 @@ Idea is from Meet. When first time I tried to Schedule Meeting in Google Meet it
 
 
 ## Important Note:
-> As Backend In Heroku if there is no interaction with Backend then it will go in Idle State, So for first user meeting joining and creation it will be slow because services starting in backend but then it will work Smoothly. 25 Seconds Delay in Token generator and api Call first one. 
+> As Backend In Heroku if there is no interaction with Backend then it will go in Idle State, So for first user meeting joining and creation it will be slow because services starting in backend but then it will work Smoothly. 35 Seconds Delay in Token generator and api Call first one only for first user. 
 
 <br>
 
