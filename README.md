@@ -1,6 +1,6 @@
-## This whole Project is for Dennis Hackthon (https://www.youtube.com/watch?v=qU2KfMwOfC4&t)
+[This Whole Project is for Dennis Hackthon](https://www.youtube.com/watch?v=qU2KfMwOfC4&t)
 
-### Idea is from Meet. When first time I tried to Schedule Meeting in Google Meet it was little Hard for me. So the opportunity here comes for me, Quick Meet is Simple & Fast to use Application. Easy to interact with it as Password Less Login/Sign Up. Schedule meeting just by selecting 3 Options Quick & Easy to use for everyone.
+Idea is from Meet. When first time I tried to Schedule Meeting in Google Meet it was little Hard for me. So the opportunity here comes for me, Quick Meet is Simple & Fast to use Application. Easy to interact with it as Password Less Login/Sign Up. Schedule meeting just by selecting 3 Options Quick & Easy to use for everyone.
 
 ## Features:
 (Important Feature 5 mint Dialog will pop at the end of time then automatically end that meeting time over just 5 mint extended time)
