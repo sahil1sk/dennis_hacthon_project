@@ -54,7 +54,7 @@ Idea is from Meet. When first time I tried to Schedule Meeting in Google Meet it
 ![](images/dashboard.png)
 
 * Profile
-![](images/profile.png)
+![](images/profile_img.png)
 
 * Join Meeting
 ![](images/join.png)
